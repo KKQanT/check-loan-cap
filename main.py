@@ -70,7 +70,7 @@ def get_total_optin():
   
   num_opt_in = int(len(df))
 
-  if num_opt_in > MAX_PEOPLE:
+  if num_opt_in >= MAX_PEOPLE:
     is_exceed = True
   else:
     is_exceed = False
