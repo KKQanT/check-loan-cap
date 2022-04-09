@@ -11,7 +11,7 @@ app = FastAPI()
 
 origins = [
   "http://localhost:3000",
-  "https://atadia-lending-lab.xyz"
+  "https://www.atadia-lending-lab.xyz"
 
 ]
 
