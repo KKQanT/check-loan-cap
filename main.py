@@ -10,7 +10,9 @@ from dotenv import load_dotenv
 app = FastAPI()
 
 origins = [
-  "http://localhost:3000"
+  "http://localhost:3000",
+  "https://atadia-lending-lab.xyz"
+
 ]
 
 app.add_middleware(
