@@ -4,6 +4,7 @@ import mysql.connector
 import pandas as pd
 import numpy as np
 import os
+import json
 from dotenv import load_dotenv
 
 
@@ -76,3 +77,10 @@ def get_total_optin():
     is_exceed = False
 
   return {'numOptIn':num_opt_in, "isExceed":is_exceed}
+
+@app.get('/get-hashlist/{daos_name}')
+
+def get_hashlist(daos_name:str):
+  with open(f'tokens-hashlist/{daos_name}.json', 'r') as json_file:
+    tokens_hashlist = json.load(json_file)
+  return tokens_hashlist
